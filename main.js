@@ -25,9 +25,14 @@ createApp({
                     headers: { 'Content_type': 'multipart/form-data' }
                 })
                 .then(response => {
-                    console.log(response);
-                    this.todoList.push(this.task)
+                    console.log(response.data);
+                    //this.todoList.push(this.task)
+                    //response.data = this.todoList
+                    // this.todoList = response.data
+                    response.data = this.todoList
+
                 })
+
         }
     },
     mounted() {

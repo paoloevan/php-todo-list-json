@@ -19,13 +19,14 @@ createApp({
                     console.error(err.message);
                 })
         },
-        pushTask(url) {
+        saveTasks() {
             axios
-                .post(url, {
+                .post(this.url, { task: this.task }, {
                     headers: { 'Content_type': 'multipart/form-data' }
                 })
                 .then(response => {
                     console.log(response);
+                    this.todoList.push(this.task)
                 })
         }
     },

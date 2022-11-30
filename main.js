@@ -20,16 +20,19 @@ createApp({
                 })
         },
         saveTasks() {
+            const data = {
+                task: this.task
+            }
             axios
-                .post(this.url, { task: this.task }, {
+                .post(this.url, data, {
                     headers: { 'Content_type': 'multipart/form-data' }
                 })
                 .then(response => {
-                    console.log(response.data);
-                    //this.todoList.push(this.task)
-                    //response.data = this.todoList
-                    // this.todoList = response.data
+                    this.todoList.push(this.task)
                     response.data = this.todoList
+                    //response.data.push(data.task)
+                    console.log(response.data);
+                    //this.todoList = response.data
 
                 })
 

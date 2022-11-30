@@ -19,6 +19,10 @@
             <ul class="list-group">
                 <li class="list-group-item" v-for="task in todoList">{{task}}</li>
             </ul>
+            <form action="server.php" method="POST">
+                <input class="form-control my-2" type="text" name="new_task" id="new_task" placeholder="Insert new task">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
         </div>
     </div>
 

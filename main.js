@@ -19,7 +19,6 @@ createApp({
             const data = {
                 text: this.task
             }
-            console.log(data);
             axios
                 .post('server.php', data, {
                     headers: { 'Content-type': 'multipart/form-data' }

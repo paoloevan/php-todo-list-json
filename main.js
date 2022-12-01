@@ -3,42 +3,35 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            url: 'server.php',
             todoList: [],
             task: ''
         }
     },
     methods: {
-        callServer(url) {
+        callServer() {
             axios
-                .get(url)
+                .get('server.php')
                 .then(response => {
-                    this.todoList = response.data;
-                })
-                .catch(err => {
-                    console.error(err.message);
+                    this.todoList = response.data
                 })
         },
         saveTasks() {
             const data = {
-                task: this.task
+                text: this.task
             }
+            console.log(data);
             axios
-                .post(this.url, data, {
-                    headers: { 'Content_type': 'multipart/form-data' }
+                .post('server.php', data, {
+                    headers: { 'Content-type': 'multipart/form-data' }
                 })
                 .then(response => {
-                    this.todoList.push(this.task)
-                    response.data = this.todoList
-                    //response.data.push(data.task)
                     console.log(response.data);
-                    //this.todoList = response.data
-
+                    this.todoList = response.data;
                 })
-
+            this.task = ''
         }
     },
     mounted() {
-        this.callServer(this.url)
+        this.callServer()
     }
 }).mount('#app')

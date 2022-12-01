@@ -1,8 +1,17 @@
 [
-    "HTML",
-    "CSS",
-    "Responsive design",
-    "Javascript",
-    "PHP",
-    "Laravel"
+    {
+        "text": "HTML"
+    },
+    {
+        "text": "CSS"
+    },
+    {
+        "text": "Responsive design"
+    },
+    {
+        "text": "Javascript"
+    },
+    {
+        "text": "Laravel"
+    }
 ]

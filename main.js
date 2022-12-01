@@ -12,6 +12,7 @@ createApp({
             axios
                 .get('read.php')
                 .then(response => {
+                    console.log(response.data);
                     this.todoList = response.data
                 })
         },

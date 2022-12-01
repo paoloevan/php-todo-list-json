@@ -10,7 +10,7 @@ createApp({
     methods: {
         callServer() {
             axios
-                .get('server.php')
+                .get('read.php')
                 .then(response => {
                     this.todoList = response.data
                 })

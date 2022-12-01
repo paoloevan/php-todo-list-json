@@ -1,1 +1,17 @@
-[{"text":"HTML"},{"text":"CSS"},{"text":"js"},{"text":"PHP"},{"text":"Laravel"},{"text":"aa"},{"text":"aaaa"},{"text":"a"}]
+[
+    {
+        "text": "HTML"
+    },
+    {
+        "text": "CSS"
+    },
+    {
+        "text": "js"
+    },
+    {
+        "text": "PHP"
+    },
+    {
+        "text": "Laravel"
+    }
+]
